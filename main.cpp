@@ -58,14 +58,15 @@ int main(int argc, char* argv[])
 	ImGuiIO& io{ ImGui::GetIO() }; (void)io;
 	ImGui_ImplSDL2_InitForSDLRenderer(Globals::window, Globals::renderer);
 	ImGui_ImplSDLRenderer_Init(Globals::renderer);
-	io.Fonts->AddFontFromFileTTF("font", 32.0f);
+	io.Fonts->AddFontFromFileTTF("font.ttf", 32.0f);
 
 	bool isRunning{ true };
 
 	Situation top{};
-	std::map<std::string, Situation>::iterator currentSituation{ top.getMap().find("The elephant is out of control!") };
 
 	createTree(&top);
+
+	Globals::currentSituation = top.getMap().find("The elephant is out of control!");
 
 	while (isRunning)
 	{
@@ -88,7 +89,7 @@ int main(int argc, char* argv[])
 		ImGui_ImplSDL2_NewFrame();
 		ImGui::NewFrame();
 
-		currentSituation->second.draw(Globals::screen);
+		Globals::currentSituation->second.draw(Globals::currentSituation->first);
 
 		ImGui::Render();
 		SDL_SetRenderDrawColor(Globals::renderer, 0x10, 0x10, 0x10, 0xFF);

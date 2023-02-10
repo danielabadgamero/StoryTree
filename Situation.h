@@ -1,5 +1,5 @@
-#ifndef DECISION_H
-#define  DECISIION_H
+#ifndef SITUATION_H
+#define SITUATION_H
 
 #include <string>
 #include <map>
