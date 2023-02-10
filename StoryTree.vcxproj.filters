@@ -39,12 +39,12 @@
     <ClCompile Include="..\..\SDK\imgui\backends\imgui_impl_sdlrenderer.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="Decision.cpp">
+    <ClCompile Include="Situation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Decision.h">
+    <ClInclude Include="Situation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Globals.h">

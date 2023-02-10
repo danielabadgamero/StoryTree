@@ -146,11 +146,11 @@
     <ClCompile Include="..\..\SDK\imgui\imgui_draw.cpp" />
     <ClCompile Include="..\..\SDK\imgui\imgui_tables.cpp" />
     <ClCompile Include="..\..\SDK\imgui\imgui_widgets.cpp" />
-    <ClCompile Include="Decision.cpp" />
+    <ClCompile Include="Situation.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Decision.h" />
+    <ClInclude Include="Situation.h" />
     <ClInclude Include="Globals.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
