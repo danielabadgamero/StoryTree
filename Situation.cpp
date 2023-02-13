@@ -35,15 +35,18 @@ void Situation::draw(std::string description)
 	for (std::map<std::string, Situation>::iterator i{ branches.begin() }; i != branches.end(); i++)
 		if (ImGui::Button(i->first.c_str()))
 		{
-			Globals::pastSituation = Globals::currentSituation;
+			Globals::pastSituations.push_back(Globals::currentSituation);
 			Globals::currentSituation = branches.find(i->first);
 		}
 	ImGui::End();
 
 	ImGui::SetNextWindowPos({ Globals::screen.w * 0.5f, Globals::screen.h * 0.9f }, 0, { 0.5f, 0.5f });
 	ImGui::Begin("Back", nullptr, Globals::windowFlags);
-	if (ImGui::Button("Back"))
-		Globals::currentSituation = Globals::pastSituation;
+	if (ImGui::Button("Back") && Globals::pastSituations.size())
+	{
+		Globals::currentSituation = Globals::pastSituations.back();
+		Globals::pastSituations.pop_back();
+	}
 	ImGui::End();
 }
 

@@ -3,6 +3,7 @@
 
 #include <map>
 #include <string>
+#include <vector>
 
 #include <SDL.h>
 #include <imgui.h>
@@ -15,8 +16,8 @@ namespace Globals
 	inline SDL_Renderer* renderer{ nullptr };
 	inline SDL_Event e{};
 	inline SDL_Rect screen{};
-	inline std::map<std::string, Situation>::iterator pastSituation{};
 	inline std::map<std::string, Situation>::iterator currentSituation{};
+	inline std::vector<std::map<std::string, Situation>::iterator> pastSituations{};
 
 	inline ImGuiWindowFlags windowFlags
 	{
