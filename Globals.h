@@ -15,7 +15,7 @@ namespace Globals
 	inline SDL_Window* window{ nullptr };
 	inline SDL_Renderer* renderer{ nullptr };
 	inline SDL_Event e{};
-	inline SDL_Rect screen{};
+	inline SDL_Rect screen{ 1600, 900 };
 	inline std::map<std::string, Situation>::iterator currentSituation{};
 	inline std::vector<std::map<std::string, Situation>::iterator> pastSituations{};
 
