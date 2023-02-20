@@ -32,7 +32,7 @@ Situation& Situation::getChild(std::string child)
 
 void Situation::draw(std::string description)
 {
-	ImGui::SetNextWindowPos({ Globals::screen.w * 0.5f, Globals::screen.h * 0.2f }, 0, { 0.5f, 0.5f });
+	ImGui::SetNextWindowPos({ Globals::screen.w * 0.5f, Globals::screen.h * 0.1f }, 0, { 0.5f, 0.5f });
 	ImGui::Begin("Situation description", nullptr, Globals::windowFlags);
 	ImGui::SetCursorPosX(ImGui::GetWindowWidth() * 0.5f - ImGui::CalcTextSize(description.c_str()).x * 0.5f);
 	ImGui::Text(description.c_str());
@@ -53,7 +53,7 @@ void Situation::draw(std::string description)
 		ImGui::Image(image, { static_cast<float>(w), static_cast<float>(h) });
 	ImGui::End();
 
-	ImGui::SetNextWindowPos({ Globals::screen.w * 0.5f, Globals::screen.h * 0.8f }, 0, { 0.5f, 0.5f });
+	ImGui::SetNextWindowPos({ Globals::screen.w * 0.5f, Globals::screen.h * 0.9f }, 0, { 0.5f, 0.5f });
 	ImGui::Begin("Back", nullptr, Globals::windowFlags);
 	if (ImGui::Button("Back") && Globals::pastSituations.size())
 	{
